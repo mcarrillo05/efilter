@@ -10,7 +10,6 @@ type Address interface {
 	GetAddress() string //returns email address
 }
 
-
 //ErrBadFormat is used when address doesn't satisfy regex.
 var (
 	ErrBadFormat = errors.New("invalid address format")
@@ -33,7 +32,6 @@ func ValidateAddress(a Address) error {
 	}
 	return InBlackList(a)
 }
-
 
 //Filter validate all addresses and returns a new slice with filtered addresses.
 func Filter(list []Address) (filtered []Address) {
